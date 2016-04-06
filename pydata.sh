@@ -11,6 +11,7 @@ echo "Setting up pip."
 
 # Install pip
 easy_install pip
+pip install --upgrade pip
 
 ###############################################################################
 # Virtual Enviroments                                                         #

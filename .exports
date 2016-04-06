@@ -1,5 +1,5 @@
-# Make vim the default editor.
-export EDITOR='vim';
+# Make emacs the default editor.
+export EDITOR='emacs';
 
 # Enable persistent REPL history for `node`.
 NODE_REPL_HISTORY_FILE=~/.node_history;
@@ -12,9 +12,9 @@ export HISTFILESIZE="${HISTSIZE}";
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth';
 
-# Prefer US English and use UTF-8.
-export LANG='en_US.UTF-8';
-export LC_ALL='en_US.UTF-8';
+# Prefer GB English and use UTF-8.
+export LANG='en_GB.UTF-8';
+export LC_ALL='en_GB.UTF-8';
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
@@ -24,3 +24,12 @@ export MANPAGER='less -X';
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
+
+# ctrl+d conveniently exits Bash, sometimes too conveniently
+export IGNOREEOF=1
+
+export JAVA_HOME=export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
+export SPARK_HOME='/Users/davidmatthews/projects/spark/spark-1.6.1-bin-hadoop2.6/'
+export PATH=$PATH:$SPARK_HOME/bin
+export PYSPARK_SUBMIT_ARGS='--master local[2] pyspark-shell'
